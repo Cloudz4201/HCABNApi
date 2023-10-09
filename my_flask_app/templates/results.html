@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ABR Results</title>
+</head>
+<body>
+
+<h2>Results:</h2>
+
+{% if abn_status %}
+    {% if abn_status == 'Active' %}
+        <p style="color: green;">Active <img src="green_tick.png" alt="Green Tick"></p>
+    {% elif abn_status == 'Cancelled' %}
+        <p style="color: red;">ABN Cancelled</p>
+    {% else %}
+        <p style="color: gray;">Unknown</p>
+    {% endif %}
+{% else %}
+    <p>No ABN status found in the results.</p>
+{% endif %}
+
+<a href="/">Go back</a>
+
+</body>
+</html>
